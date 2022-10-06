@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>
+            This is gonna blow
+        </p>
+
+        <span class = "BlastoffDisplay" id = "BlastoffDisplay" > Time until Blastoff </span>
+       
+       <script>
+       var currTime=50;
+  
+     window.setInterval(function(){
+if (currTime > 0) 
+    currTime--;
+    document.getElementById("BlastoffDisplay").innerHTML = "The time is " + currTime + " seconds";
+        if(currTime==25){document.getElementById("BlastoffDisplay").innerHTML = "halfway to launch";}
+        else if(currTime==0){document.getElementById("BlastoffDisplay").innerHTML = "Blastoff";}
+},300
+);
+
+
+        </script>
+
+
+    </body>
+</html>
