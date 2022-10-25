@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>UAT Space Program</h1>
+<p>"space launch"</p>
+
+<input type="first name" value="login" onselect="">
+<input type="button" value="Start" onclick="StartBlastoffSequence()"> 
+<input type="button" value="Stop" onclick="alert ('launch haulted')"> 
+
+
+
+
+
+<script>
+
+var currTime = 50;
+
+
+function StartBlastoffSequence(){
+
+    window.setInterval(function(){
+if (currTime > 0) 
+    currTime--;
+    document.getElementById("BlastoffDisplay").innerHTML = "The time is " + currTime + " seconds";
+        if(currTime==25){document.getElementById("BlastoffDisplay").innerHTML = "halfway to launch";}
+        else if(currTime==0){document.getElementById("BlastoffDisplay").innerHTML = "Blastoff";}
+},300
+);
+}
+</script>
+</body>
+</html>
